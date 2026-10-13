@@ -1,0 +1,273 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+	font-family: "Poppins", sans-serif;
+	color: #e6f4f1;
+
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+
+	justify-content: flex-start;
+	align-items: center;
+
+	background: linear-gradient(180deg, #192030 0%, #0b0e14 100%);
+
+	width: 100vw;
+	min-height: 100vh;
+	overflow: hidden auto;
+}
+
+img {
+	max-width: 90vw;
+	max-height: 90vh;
+}
+
+a {
+	transition-duration: 200ms;
+}
+a:hover {
+	color: rgb(90, 180, 255);
+	text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.45);
+}
+
+/* Tables */
+table {
+	/* margin-top: 3vh; */
+	margin-inline: 5vw;
+	border-collapse: collapse;
+}
+
+caption {
+	font-size: 0.7rem;
+	padding: 5px;
+	caption-side: bottom;
+	font-style: italic;
+}
+
+thead,
+tfoot {
+	background-color: rgb(50, 50, 50);
+}
+tbody {
+	background-color: rgb(20, 20, 20);
+}
+
+th,
+td {
+	border: 1px solid rgba(225, 225, 225, 0.6);
+	padding: 10px 30px;
+	text-align: center;
+}
+
+tfoot td {
+	font-weight: bold;
+}
+
+/* Navigation bar */
+#NavBar {
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+
+	position: fixed;
+	top: 0%;
+	z-index: 1;
+
+	width: 100%;
+	height: 12vh;
+
+	box-shadow: 0px 5px 10px 0ch rgba(0, 0, 0, 0.7);
+	background: radial-gradient(circle, #282b34 0%, #192030 60%);
+
+	user-select: none;
+}
+
+#NavBar ul {
+	display: flex;
+	flex-direction: row;
+
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	height: 100%;
+
+	list-style: none;
+}
+#NavBar li {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	font-size: 1.5rem;
+}
+#NavBar li a {
+	display: flex;
+	position: relative;
+
+	width: 100%;
+	height: 100%;
+
+	padding-inline: 1vw;
+
+	color: #e6f4f1;
+
+	text-wrap-mode: nowrap;
+	text-decoration: none;
+	transition-duration: 300ms;
+}
+
+#NavBar li a:hover {
+	text-shadow: 0px 0px 50px rgba(255, 255, 255, 0.7);
+	font-size: 2.25rem;
+}
+
+#NavBar li a:active {
+	font-size: 2.15rem;
+}
+
+#NavBar li a::after {
+	content: " ";
+
+	width: 100%;
+	height: 3px;
+
+	left: 0;
+	bottom: 0;
+
+	position: absolute;
+
+	background: #e6f4f1;
+
+	transition-duration: 600ms;
+	transform: scaleX(0);
+}
+
+#NavBar li a:hover::after {
+	transform: scaleX(0.8);
+}
+#NavBar li a:active::after {
+	transform: scaleX(0.75);
+}
+
+/* Containers */
+
+.top-container {
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+	justify-content: center;
+
+	position: relative;
+	margin-top: 15vh;
+
+	width: 100%;
+	height: 10vh;
+}
+.top-container h1 {
+	padding-inline: 5vw;
+}
+
+.main-container {
+	display: flex;
+	flex-direction: column;
+
+	align-items: flex-start;
+
+	margin-block: 5vh;
+	padding-inline: 5vw;
+
+	position: relative;
+
+	width: 100%;
+	flex-grow: 1; /* Fill the empty space*/
+}
+.main-container p {
+	margin-block: 0.5vh;
+}
+.main-container h2 {
+	margin-top: 3vh;
+}
+.main-container ol {
+	list-style-position: inside;
+	margin-top: 1vh;
+	margin-left: 2vw;
+	font-size: 1.25rem;
+}
+.main-container li {
+	transition-duration: 200ms;
+}
+.main-container li:hover {
+	text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.9);
+	color: rgb(90, 180, 255);
+	transform: scale(1.1);
+}
+
+.column-container {
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+
+	position: relative;
+
+	width: 50%;
+	flex-grow: 1;
+	font-size: 1.15rem;
+}
+
+.row-container {
+	display: flex;
+	flex-direction: row;
+
+	align-items: center;
+
+	gap: 4vw;
+	padding-block: 3vh;
+
+	width: 100%;
+	font-size: 1.15rem;
+}
+
+.center-content {
+	display: flex;
+	align-items: start;
+	justify-content: center;
+
+	padding-block: 3vh;
+
+	width: 100%;
+	height: auto;
+}
+
+/* Illustrations */
+
+.illustration-container-row {
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+	justify-content: center;
+
+	padding-block: 4.5vh;
+
+	width: 100%;
+	height: auto;
+}
+
+.zoom-img {
+	transition-duration: 250ms;
+	cursor: zoom-in;
+}
+.zoom-img:hover {
+	width: 95%;
+}
